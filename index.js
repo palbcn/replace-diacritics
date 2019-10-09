@@ -62,20 +62,3 @@
     module.exports = replaceDiacritics;
   }
 })();
-
-/* original version..... 
-  function replaceDiacritics(str) {
-    const WITH_DIACRITICS    = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž¿¡'.split('');
-    const WITHOUT_DIACRITICS = 'AAAAAAaaaaaaOOOOOOooooooEEEEeeeeDCcDIIIIiiiiUUUUuuuuNnSsYyyZz?!'.split('');
-    var ain = str.split('');
-    var aou = ain;
-    var lin = ain.length;
-    for (var i = 0; i < lin; i++) {
-      var j = WITH_DIACRITICS.indexOf(ain[i]);  
-      if (j!=-1) {
-        aou[i] = WITHOUT_DIACRITICS[j];
-      }
-    }
-    return aou.join('');
-  };
-*/
