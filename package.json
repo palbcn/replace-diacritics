@@ -1,0 +1,14 @@
+{
+  "name": "replace-diacritics",
+  "version": "1.0.0",
+  "description": "Replaces the latin characters with accents and other diacritical marks (for example À) in a string, converting them to their most similar plain ascii latin characters (in the example, A).",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "PAL BCN <palbcn@yahoo.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}

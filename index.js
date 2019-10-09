@@ -1,21 +1,18 @@
 /* 
   replace diacritics
 
-  Pere Albert, Barcelona <palbcn@yahoo.com>
+  PAL BCN <palbcn@yahoo.com>
   
-*/ 
- 
- 
+*/
 (function ndNS() {
-
   /**
     replace characters with diacritics "`´^¨~,º" (for example À) 
-    with the equivalent letter without diacritics (in the example, A)
-    
+    with the equivalent letter without diacritics (in the example, A)    
   */  
   function replaceDiacritics(str) {
     /*
-    Mirror of the unicode table from 00c0 to 017f without diacritics.  
+    NO_DIACRITICS is the mirror of the unicode table 
+    from 00c0 to 017f without diacritics.  
     
     for (let i=0x00c0, a=[]; i<=0x17f; i++) a.push(i);
     let s=String.fromCharCode(...a);
@@ -43,10 +40,9 @@
         chars[i] = NO_DIACRITICS_00C0_017F[ c-0x00c0 ];
     }
     return chars.join('');    
-  };
+  };  
   
-  
-  /* if it's invoked from command line, perform some elementary tests **/
+  /* if it's invoked from command line, perform some elementary examples */
   if (require.main === module) {
     (function main(){
       let dichars=[];
@@ -57,7 +53,7 @@
       console.log(test,"->",replaceDiacritics(test));              
     })();
    
-  /*  export just a single function */     
+  /*  the module exports just a single function */     
   } else {
     module.exports = replaceDiacritics;
   }
