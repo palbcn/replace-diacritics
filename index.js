@@ -33,6 +33,20 @@
       "lLlNnNnNnnNnOoOo" +  "OoOoRrRrRrSsSsSs" +  //0140
       "SsTtTtTtUuUuUuUu" +  "UuUuWwYyYZzZzZzF";   //0160-017f
     
+    /* TO-DO, analize if it makes sense to also remove           
+        the individual combining diacritics in the unicode table block from 0300 to 036f, including the combining grapheme joiner code at 034f
+
+        ◌̀ 	◌́ 	◌̂ 	◌̃ 	◌̄ 	◌̅ 	◌̆ 	◌̇ 	◌̈ 	◌̉ 	◌̊ 	◌̋ 	◌̌ 	◌̍ 	◌̎ 	◌̏
+        ◌̐ 	◌̑ 	◌̒ 	◌̓ 	◌̔ 	◌̕ 	◌̖ 	◌;̗ 	◌̘ 	◌̙ 	◌̚ 	◌̛ 	◌̜ 	◌̝ 	◌̞ 	◌̟
+        ◌̠ 	◌̡ 	◌̢ 	◌̣ 	◌̤ 	◌̥ 	◌̦ 	◌̧ 	◌̨ 	◌̩ 	◌̪ 	◌̫ 	◌̬ 	◌̭ 	◌̮ 	◌̯
+        ◌̰ 	◌̱ 	◌̲ 	◌̳ 	◌̴ 	◌̵ 	◌̶ 	◌̷ 	◌̸ 	◌̹ 	◌̺ 	◌̻ 	◌̼ 	◌̽ 	◌̾ 	◌̿
+        ◌̀ 	◌́ 	◌͂ 	◌̓ 	◌̈́ 	◌ͅ 	◌͆ 	◌͇ 	◌͈ 	◌͉ 	◌͊ 	◌͋ 	◌͌ 	◌͍ 	◌͎ 	 CGJ
+        ◌͐ 	◌͑ 	◌͒ 	◌͓ 	◌͔ 	◌͕ 	◌͖ 	◌͗ 	◌͘ 	◌͙ 	◌͚ 	◌͛ 	◌͜ 	◌͝ 	◌͞ 	◌͟
+        ◌͠ 	◌͡ 	◌͢ 	◌ͣ 	◌ͤ 	◌ͥ 	◌ͦ 	◌ͧ 	◌ͨ 	◌ͩ 	◌ͪ 	◌ͫ 	◌ͬ 	◌ͭ 	◌ͮ 	◌ͯ
+
+       */
+    
+    
     let chars=str.split('');
     for (let i=0; i<str.length; i++) {
       let c = str.charCodeAt(i);
